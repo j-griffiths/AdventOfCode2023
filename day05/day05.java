@@ -89,10 +89,11 @@ public class day05 {
                 Long outputLowerBound = Long.parseLong(functionParts[0]);
                 Long functionRange = Long.parseLong(functionParts[2]);
                 Long inputUpperBound = inputLowerBound + functionRange;
-                if (upperBound <= inputLowerBound
-                        || lowerBound >= inputUpperBound && i == mappingFunctions.size() - 1) {
-                    newRanges.add(new SimpleEntry<>(pair.getKey(), pair.getValue()));
-                    break;
+                if (upperBound <= inputLowerBound || lowerBound >= inputUpperBound) {
+                    if (i == mappingFunctions.size() - 1) {
+                        newRanges.add(new SimpleEntry<>(pair.getKey(), pair.getValue()));
+                        break;
+                    }
                 } else if (upperBound <= inputUpperBound && lowerBound >= inputLowerBound
                         && lowerBound < inputUpperBound) {
                     Long difference = lowerBound - inputLowerBound;
