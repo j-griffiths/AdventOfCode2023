@@ -82,7 +82,6 @@ public class day02 {
             }
             int power = redMax * greenMax * blueMax;
             total += power;
-            System.out.println(power);
         }
         return total;
     }
