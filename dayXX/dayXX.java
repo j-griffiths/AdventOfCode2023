@@ -7,8 +7,17 @@ public class dayXX {
     final static String day = "XX";
 
     public static void main(String[] args) {
-        List<List<String>> inputParts = utils.splitInput(utils.readInput(day));
+        List<String> lines = utils.readInput(day);
 
-        System.out.println();
+        System.out.println(partOne(lines));
+        System.out.println(partTwo(lines));
+    }
+
+    public static int partOne(List<String> lines) {
+        return 0;
+    }
+
+    public static int partTwo(List<String> lines) {
+        return 0;
     }
 }
